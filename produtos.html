@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Gian Shopp</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/lion-logo.svg" alt="Logo leão" width="60px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.html">Produtos</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        </nav>
+
+        <main class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Cadastro de Produtos</h1>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <form action="" id="registerProducts">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Nome do Produto</label>
+                        <input type="text" class="form-control" id="title" placeholder="Digite o nome do produto...">
+                    </div>
+
+                    <div class="mb-2 input-group">
+                        <div class="mb-3 col-sm-12 col-md-6">
+                            <label for="price" class="form-label">Valor</label>
+                            <input type="text" id="price" placeholder="Valor do produto..." class="form-control">
+                        </div>
+
+                        <div class="mb-3 col-sm-12 col-md-6">
+                            <label for="img" class="form-label">Foto</label>
+                            <input type="text" id="img" placeholder="Nome da foto" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Descrição</label>
+                        <textarea class="form-control" id="description" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Salvar</button>
+                </form>
+            </div>
+
+            <div class="row">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Valor</th>
+                            <th>Foto</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody id="loadProducts"></tbody>
+                </table>
+            </div>
+        </main>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <script src="saveData.js"></script>
+</body>
+</html>

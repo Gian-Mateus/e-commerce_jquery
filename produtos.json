@@ -1,0 +1,28 @@
+{
+    "products" : [
+        {
+            "title": "Fone de Ouvido",
+            "description": "Fone muito bom sem fio",
+            "img": "fone-hyperx.jpg",
+            "price": 250.00
+        },
+        {
+            "title": "Fone de Ouvido",
+            "description": "Fone muito bom sem fio",
+            "img": "fone-hyperx.jpg",
+            "price": 250.00
+        },
+        {
+            "title": "Fone de Ouvido",
+            "description": "Fone muito bom sem fio",
+            "img": "fone-hyperx.jpg",
+            "price": 250.00
+        },
+        {
+            "title": "Fone de Ouvido",
+            "description": "Fone muito bom sem fio",
+            "img": "fone-hyperx.jpg",
+            "price": 250.00
+        }
+    ]
+}
