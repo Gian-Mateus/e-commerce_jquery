@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css">
-    <title>Gian Shopp</title>
+    <title>Shopp</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="assets/lion-logo.svg" alt="Logo leão" width="60px"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" href="index.html"><img src="assets/lion-logo.svg" alt="Logo leão" width="60px" />
+                Prótotipo de e-commerce</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -20,30 +25,39 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="produtos.html">Produtos</a>
+                        <a class="nav-link" href="produtos.html">Cadastrar Produtos</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
-        </nav>
+    </nav>
 
-        <main class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Produtos</h1>
-                </div>
+    <main class="container vh-100">
+        <div class="row mt-3">
+            <div class="col-12">
+                <h1>Olá, seja bem-vindo!</h1>
+                <p>
+                    Este é um projeto que simula um e-commerce usando o localstorage
+                    para salvar os dados sobre os produtos. Ele também utiliza da
+                    biblioteca jquery.
+                </p>
             </div>
-            <div class="row" id="loadProducts">
-                
+        </div>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h1>Produtos</h1>
             </div>
-        </main>
+            <div class="row d-flex justify-content-center align-items-center products-home row-gap-4">
+
+            </div>
+        </div>
+
+    </main>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="jquery/jquery-3.7.1.min.js"></script>
-    <script src="script.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="injectProducts.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>

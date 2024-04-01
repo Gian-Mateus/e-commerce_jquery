@@ -5,28 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Gian Shopp</title>
+    <title>Shopp</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="assets/lion-logo.svg" alt="Logo leão" width="60px"></a>
+            <a class="navbar-brand" href="index.html"><img src="assets/lion-logo.svg" alt="Logo leão" width="60px"> Prótotipo de e-commerce</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="produtos.html">Produtos</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
         </nav>
@@ -38,21 +34,21 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <form action="" id="registerProducts">
+                <form id="registerProducts">
                     <div class="mb-3">
-                        <label for="title" class="form-label">Nome do Produto</label>
-                        <input type="text" class="form-control" id="title" placeholder="Digite o nome do produto...">
+                        <label for="name" class="form-label">Nome do Produto</label>
+                        <input type="text" class="form-control" id="name" placeholder="Digite o nome do produto..." required>
                     </div>
 
                     <div class="mb-2 input-group">
-                        <div class="mb-3 col-sm-12 col-md-6">
+                        <div class="mb-3 col-sm-12 col-md-6 me-3">
                             <label for="price" class="form-label">Valor</label>
-                            <input type="text" id="price" placeholder="Valor do produto..." class="form-control">
+                            <input type="text" id="price" placeholder="Valor do produto..." class="form-control" required>
                         </div>
 
                         <div class="mb-3 col-sm-12 col-md-6">
                             <label for="img" class="form-label">Foto</label>
-                            <input type="text" id="img" placeholder="Nome da foto" class="form-control">
+                            <input type="text" id="img" placeholder="Endereço da foto..." class="form-control" required>
                         </div>
                     </div>
 
@@ -61,7 +57,8 @@
                         <textarea class="form-control" id="description" rows="3"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-success">Salvar</button>
+                    <button type="submit" class="btn btn-success" id="save">Salvar</button>
+                    <button class="btn btn-danger" id="clear">Limpar</button>
                 </form>
             </div>
 
@@ -73,16 +70,31 @@
                             <th>Valor</th>
                             <th>Foto</th>
                             <th>Descrição</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
-                    <tbody id="loadProducts"></tbody>
+                    <tbody id="loadProducts">
+                        
+                    </tbody>
                 </table>
             </div>
         </main>
 
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Sistema:</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+        
+        </div>
+    </div>
+    </div>
+
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="jquery/jquery-3.7.1.min.js"></script>
-    <script src="script.js"></script>
-    <script src="saveData.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="injectProducts.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
