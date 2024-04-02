@@ -112,7 +112,7 @@ $(function(){
                         <p class="card-text">
                         ${product.description}
                         </p>
-                        <span class="btn btn-primary align-self-end mt-4">${product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                        <span class="btn btn-primary align-self-end">${product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
                     </div>
                 </div>
             </div>
