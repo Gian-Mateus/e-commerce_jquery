@@ -64,7 +64,7 @@ $(function(){
                 $("#price").val(productEdit.price);
                 $("#img").val(productEdit.photo);
                 $("#description").val(productEdit.description);
-                console.log("entrou no click edit");
+                // console.log("entrou no click edit");
             });
             $(".btn-delete").on("click", function(){
                 const id = $(this).closest('tr').attr('id');
@@ -74,7 +74,7 @@ $(function(){
                 // Toast delete confirmation
                 showToast("Produto excluído com sucesso!");
                 renderTable();
-                console.log("entrou no click delte");
+                // console.log("entrou no click delte");
             });
         });
     }; 
@@ -99,7 +99,7 @@ $(function(){
     if(Object.keys(localStorage) == ""){
         $(".products-home").html("<h2>Nenhum produto cadastrado</h2>")
     } else{
-        console.log("caiu no else");
+        // console.log("caiu no else");
         const productCard = Object.keys(localStorage);
         productCard.forEach(function(key){
             let product = JSON.parse(localStorage.getItem(key));
